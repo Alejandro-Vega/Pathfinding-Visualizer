@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pathfinding Visualizer</title>
+        <meta name="description" content="bug tracker">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Red+Hat+Display:wght@400;500;700;900&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="styles.css">
+        <script src="resources/cell.js"></script>
+        <script src="resources/structures.js"></script>
+        <script src="algorithms/a.js"></script>
+        <script src="algorithms/dfs.js"></script>
+        <script src="algorithms/bfs.js"></script>
+        <script src="algorithms/dijkstra.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="title-wrapper">
+                <h2 id="title">Pathfinding Visualizer</h2>
+            </div>
+            <nav>
+                <div id="icon-btns">
+                    <div class="icon-wrapper">
+                        <img class="icon" src="images/start-icon.png">
+                        <p class="icon-desc">Start Node</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img class="icon" src="images/finish-icon.png">
+                        <p class="icon-desc">Finish Node</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img class="icon" src="images/weight-icon.png">
+                        <p class="icon-desc">Weight Node</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img class="icon" src="images/wall-icon.png">
+                        <p class="icon-desc">Wall Node</p>
+                    </div>
+                </div>
+                
+                <div id="search-wrapper" class="hvr-grow">
+                    <button id="search-btn">SEARCH</button>
+                </div>
+                <div id="algorithm-wrapper">
+                    <label id="algorithm-label" for="algorithm">Choose an algorithm: </label>
+                    <select id="algorithm">
+                        <option value="dijkstra">Dijkstra's Algorithm</option>
+                        <option value="a">A* Search</option>
+                        <option value="greedy">Greedy Best-first Search</option>
+                        <option value="swarm">Swarm Algorithm</option>
+                    </select>
+
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div id="grid-wrapper" class="start-icon-cursor" oncontextmenu="return false;">
+
+            </div>
+        </main>
+    </body>
+</html>
