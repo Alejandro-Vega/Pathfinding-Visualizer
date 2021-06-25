@@ -1,5 +1,6 @@
 (function () {
 	window.addEventListener("load", init);
+    const ALGORITHMS = ["dijkstra", "bfs", "dfs"];
     const CURSORS = ["START", "FINISH", "WEIGHT", "WALL"];
     const COLUMNS = 50;
     let ROWS;
@@ -265,12 +266,22 @@
     function searchListener() {
         let searchBtn = id("search-btn");
         searchBtn.addEventListener("click", function() {
-            clearBoard();
-            setNeighbors();
-            //initDijkstra(newGrid, COLUMNS);
-            //initBFS(grid, startNode, finishNode);
-            initDFS(grid, startNode, finishNode);
-            //initA(grid, startNode, finishNode);
+            if(startNode != null && finishNode != null) {
+                let algorithm = id("algorithm").value;
+                clearBoard();
+                setNeighbors();
+                if(algorithm == ALGORITHMS[1]) {
+                    initBFS(grid, startNode, finishNode);
+                } else if(algorithm == ALGORITHMS[2]) {
+                    initDFS(grid, startNode, finishNode);
+                } else {
+                    console.log(algorithm + " algorithm not implemented yet.");
+                }
+                
+            } else {
+                console.log("Please place a start node and finish node before searching");
+            }
+            
         });
     }
 
