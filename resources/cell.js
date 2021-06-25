@@ -12,6 +12,9 @@ class Cell {
         this.fScore = 0;
         this.gScore = 0;
         this.hScore = 0;
+
+        // for DFS algorithm
+        this.cost = 0;
     }
 
 }

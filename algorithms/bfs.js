@@ -1,6 +1,5 @@
-let finalPath = [];
-
 function initBFS(grid, startNode, finishNode) {
+    let finalPath = [];
     let q = new Queue(grid.length * grid[0].length);
     let visited = new Set();
     let time = 10;
@@ -15,7 +14,7 @@ function initBFS(grid, startNode, finishNode) {
         ele = q.dequeue();
         path.push(ele);
         ele.neighbors
-            .filter(node => !visited.has(node) && node.type != "WALL")
+            .filter(node => node != null && !visited.has(node) && node.type != "WALL")
             .forEach(node => {
                 visited.add(node);
                 q.enqueue(node);

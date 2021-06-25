@@ -201,7 +201,6 @@
         
         node.type = "EMPTY";
         node.previousNode = undefined;
-        node.neighbors = [];
         node.innerCell.style.background = "none"; 
         node.innerCell.style.backgroundColor = "#fff";
         node.innerCell.style.backgroundRepeat = "no-repeat";
@@ -269,7 +268,8 @@
             clearBoard();
             setNeighbors();
             //initDijkstra(newGrid, COLUMNS);
-            initBFS(grid, startNode, finishNode);
+            //initBFS(grid, startNode, finishNode);
+            initDFS(grid, startNode, finishNode);
             //initA(grid, startNode, finishNode);
         });
     }
@@ -286,18 +286,28 @@
 
     function findNeighbors(node) {
         let neighbors = [];
-        if(grid[node.column+1]) { // right
-            neighbors.push(grid[node.column+1][node.row]); 
-        } 
-        if(grid[node.column] && grid[node.column][node.row-1]) { // up
-            neighbors.push(grid[node.column][node.row-1]); 
-        } 
         if(grid[node.column-1]) { // left
             neighbors.push(grid[node.column-1][node.row]); 
-        } 
+        } else {
+            neighbors.push(null);
+        }
         if(grid[node.column] && grid[node.column][node.row+1]) { // down
             neighbors.push(grid[node.column][node.row+1]); 
-        } 
+        } else {
+            neighbors.push(null);
+        }
+        if(grid[node.column+1]) { // right
+            neighbors.push(grid[node.column+1][node.row]); 
+        } else {
+            neighbors.push(null);
+        }
+        if(grid[node.column] && grid[node.column][node.row-1]) { // up
+            neighbors.push(grid[node.column][node.row-1]); 
+        } else {
+            neighbors.push(null);
+        }
+        
+        
         return neighbors;
     }
 
