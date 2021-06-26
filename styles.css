@@ -6,7 +6,7 @@
 
 #title-wrapper {
     width: 100%;
-    min-height: 4vh;
+    min-height: 35px;
     max-height: 4vh;
     background-color: #062F4F;
 }
@@ -14,9 +14,8 @@
 nav {
     display: flex;
     flex-direction: row;
-   
     width: 100%;
-    min-height: 6vh;
+    min-height: 55px;
     max-height: 6vh;
     background-color: #fff;
     color: #062F4F;
@@ -47,6 +46,8 @@ main {
 }
 
 .column {
+    min-width: 32px;
+    min-height: 32px;
     max-height: 100%;
     height: 100%;
 }
@@ -62,6 +63,8 @@ main {
 }
 
 .inner-cell {
+    min-width: 28.8px;
+    min-height: 28.8px;
     width: 90%;
     height: 90%;
     background-color: #fff;
