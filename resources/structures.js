@@ -20,6 +20,7 @@ class Queue {
     }
 }
 
+
 class Stack {
     constructor() {
         this.elements = [];

@@ -15,6 +15,10 @@ class Cell {
 
         // for DFS algorithm
         this.cost = 0;
+
+        // for Dijkstra algorithm
+        this.distance = 0;
+        this.weight = 1;
     }
 
 }

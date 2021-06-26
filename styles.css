@@ -43,6 +43,7 @@ main {
     height: 100%;
     max-width: 100%;
     max-height: 100%;
+    overflow: hidden;
 }
 
 .column {
@@ -223,7 +224,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098D1;
+    background: rgb(12, 53, 71);
     border-radius: 100%;
     -webkit-transform: scale(2);
     transform: scale(2);
@@ -234,6 +235,34 @@ p {
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
     
+  }
+
+  @keyframes blockAnimation {
+      0% {
+          transform: scale(0.3);
+          background-color: rgb(12, 53, 71);
+      }
+
+      50% {
+          transform: scale(1.2);
+          background-color: rgb(12, 53, 71);
+      }
+
+      100% {
+          transform: scale(1);
+          background-color: rgb(12, 53, 71);
+      }
+  }
+
+  .node-block {
+      animation-name: blockAnimation;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-out;
+      animation-delay: 0;
+      animation-direction: alternate;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
   }
   
 

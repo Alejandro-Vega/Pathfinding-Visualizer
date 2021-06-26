@@ -45,11 +45,7 @@ function initDFS(grid, startNode, finishNode) {
         }
     }
 
-    
-
-    updateCells();
-
-    
+    updateCells();    
 
 }
 

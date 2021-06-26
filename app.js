@@ -172,6 +172,7 @@
         if(node.type.toUpperCase() == "WEIGHT") {
             node.innerCell.style.backgroundImage = "url('images/weight-icon-18.png')";
             node.innerCell.style.backgroundColor = "#95FF80";
+            node.weight = 5;
         } else if(node.type.toUpperCase() == "WALL") {
             node.innerCell.style.backgroundImage = "url('images/wall-icon-18.png')";
             node.innerCell.style.backgroundColor = "#062f4f";
@@ -270,7 +271,9 @@
                 let algorithm = id("algorithm").value;
                 clearBoard();
                 setNeighbors();
-                if(algorithm == ALGORITHMS[1]) {
+                if(algorithm == ALGORITHMS[0]) {
+                    initDijkstra(grid, startNode, finishNode);
+                } else if(algorithm == ALGORITHMS[1]) {
                     initBFS(grid, startNode, finishNode);
                 } else if(algorithm == ALGORITHMS[2]) {
                     initDFS(grid, startNode, finishNode);
