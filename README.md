@@ -55,7 +55,7 @@ This program uses pathfinding algorithms/searches to find the end node from the 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](/images/example-dijkstra-1.png)
+[![Product Name Screen Shot][product-screenshot]](/images/example-dijkstra-1.gif)
 
 It can sometimes be difficult to tell the difference between the innumerable amount of 
 pathfinding algorithms and searches that are available. It is much easier to grasp the 
@@ -127,7 +127,7 @@ Optional features:
 
 Once you click the "SEARCH" button it will begin the algorithm search. If the end node is found then it will create a yellow path from the start node to the end node. NOTE: Some search algorithms such as Depth-First Search do NOT show the shortest path.
 
-[![Cubic Spline Interpolation Visualizer][input-example-screenshot]](public/images/example-input1.png)
+[![Cubic Spline Interpolation Visualizer][input-example-screenshot]](/images/example-dijkstra-1.png)
 
 The program uses CSS animation to visualize the algorithms. The animation may stutter or not function properly if the computer running the program is unable to smoothly handle it. Although, it is expected that the more cells that are considered into the algorithm the more computation power and time will be needed to calculate the results. Delay may vary depending on the computation.
 
@@ -197,8 +197,8 @@ Project Link: [https://github.com/Alejandro-Vega/Cubic-Spline-Interpolation-Visu
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: /images/example-dijkstra-1.png
-[input-example-screenshot]: /images/example-input1.png
+[product-screenshot]: /images/example-dijkstra-1.gif
+[input-example-screenshot]: /images/example-dijkstra-1.png
 [result-example-screenshot]: /images/example-result1.png
 [step1-example-screenshot]: /images/example-step1.png
 [step2-example-screenshot]: /images/example-step2.png
